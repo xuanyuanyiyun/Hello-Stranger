@@ -12,6 +12,8 @@ import path from 'path'
 import dotenv from 'dotenv'
 import { fileURLToPath } from 'url'
 import authRoutes from './routes/auth.js'
+import matchRoutes from './routes/match.js'
+import securityRoutes from './routes/security.js'
 
 // for esm mode
 const __filename = fileURLToPath(import.meta.url)
@@ -30,6 +32,8 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }))
  * API Routes
  */
 app.use('/api/auth', authRoutes)
+app.use('/api/match', matchRoutes)
+app.use('/api/security', securityRoutes)
 
 /**
  * health
