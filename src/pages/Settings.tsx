@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Settings, User, Lock, Bell, Notifications, Shield, Privacy, HelpCircle, LogOut, ChevronRight, ToggleLeft, ToggleRight } from 'lucide-react';
+import { Settings as SettingsIcon, User, Lock, Bell, Notifications, Shield, Privacy, HelpCircle, LogOut, ChevronRight, ToggleLeft, ToggleRight } from 'lucide-react';
 
 export default function Settings() {
   const [notifications, setNotifications] = useState(true);
@@ -45,7 +45,7 @@ export default function Settings() {
       title: '其他',
       items: [
         { icon: <HelpCircle className="h-5 w-5" />, label: '帮助中心', path: '#' },
-        { icon: <Settings className="h-5 w-5" />, label: '关于我们', path: '#' },
+        { icon: <SettingsIcon className="h-5 w-5" />, label: '关于我们', path: '#' },
         { icon: <LogOut className="h-5 w-5" />, label: '退出登录', path: '/login' }
       ]
     }
